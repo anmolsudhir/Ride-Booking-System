@@ -8,6 +8,7 @@ function Accout({authentication}) {
   const [props, setProps] = useState(null)
   useEffect(() => {
     let username = localStorage.getItem('username')
+    console.log(username)
     axios.post('http://localhost:7070/api/v1/getuserinfo', {username} )
     .then((response) => {
       if(response){
